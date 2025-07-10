@@ -1,314 +1,808 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sistema de agendamento para barbearias. Agenda online, lembretes automáticos e controle total dos seus horários.">
-    <meta name="keywords" content="barbearia, agendamento, agenda online, barbertime, sistema barbearia">
-    <title>BarberTime - Agendamentos sem complicação para barbearias</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-            },
-          }
-        }
-      }
-    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberTime - Revolucione a Gestão da Sua Barbearia</title>
     <style>
-      .faq-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <img src="logo-barbertime.png" alt="BarberTime Logo" class="h-10" />
-          <span class="text-xl font-bold text-gray-900">BarberTime</span>
-        </div>
-        <nav class="hidden md:flex items-center gap-8">
-          <a href="#features" class="hover:text-blue-600 transition">Recursos</a>
-          <a href="#testimonials" class="hover:text-blue-600 transition">Depoimentos</a>
-          <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
-        </nav>
-        <a href="https://saas-barbertime.lovable.app" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Acessar App</a>
-      </div>
-    </header>
-
-    <main class="text-center py-20 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-          Agendamentos fáceis para barbeiros modernos <span class="text-blue-600">💈</span>
-        </h1>
-        <p class="text-lg md:text-xl mb-8 text-gray-600">
-          Chega de papel, planilhas ou esquecer clientes. Com o <strong class="text-blue-600">BarberTime</strong>, você organiza sua agenda, recebe lembretes e mostra profissionalismo.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="https://saas-barbertime.lovable.app" class="inline-block bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-900 transition shadow-lg hover:shadow-xl">
-            Comece agora — Grátis
-          </a>
-          <a href="#features" class="inline-block border-2 border-gray-300 text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
-            Conheça os recursos
-          </a>
-        </div>
-        <div class="mt-12 rounded-xl overflow-hidden shadow-xl border border-gray-200 max-w-4xl mx-auto">
-          <img src="dashboard-preview.jpg" alt="Preview do BarberTime" class="w-full h-auto">
-        </div>
-      </div>
-    </main>
-
-    <section id="features" class="py-16 px-6 bg-white">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Recursos que fazem a diferença</h2>
-        
-        <div class="flex flex-col md:flex-row items-center mb-16">
-          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-            <h3 class="text-2xl font-semibold mb-4">Agendamento 24/7</h3>
-            <p class="text-gray-600 mb-4">Seus clientes podem marcar horário a qualquer momento, mesmo quando você está dormindo.</p>
-            <ul class="space-y-2">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✓</span>
-                <span>Integração com Google Calendar</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✓</span>
-                <span>Bloqueio de horários indisponíveis</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✓</span>
-                <span>Pagamento online integrado</span>
-              </li>
-            </ul>
-          </div>
-          <div class="md:w-1/2">
-            <img src="agendamento-feature.jpg" alt="Agendamento 24/7" class="rounded-lg shadow-md border border-gray-200">
-          </div>
-        </div>
-
-        <div class="flex flex-col md:flex-row-reverse items-center mb-16">
-          <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
-            <h3 class="text-2xl font-semibold mb-4">Lembretes automáticos</h3>
-            <p class="text-gray-600 mb-4">Reduza faltas com notificações personalizadas por WhatsApp ou e-mail.</p>
-            <ul class="space-y-2">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✓</span>
-                <span>Confirmação automática de agendamentos</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✓</span>
-                <span>Lembrete 24h antes do serviço</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✓</span>
-                <span>Personalize as mensagens</span>
-              </li>
-            </ul>
-          </div>
-          <div class="md:w-1/2">
-            <img src="lembretes-feature.jpg" alt="Lembretes automáticos" class="rounded-lg shadow-md border border-gray-200">
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-10 text-center mt-12">
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-blue-600 text-xl">📅</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Agenda Inteligente</h3>
-            <p class="text-gray-600">Visualize sua agenda de forma clara e organize seus horários com facilidade.</p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-blue-600 text-xl">📱</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">App Mobile</h3>
-            <p class="text-gray-600">Acesse sua agenda de qualquer lugar pelo celular ou tablet.</p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-blue-600 text-xl">📊</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Relatórios</h3>
-            <p class="text-gray-600">Acompanhe seus melhores clientes e serviços mais populares.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonials" class="py-16 px-6 bg-gray-50">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">O que os barbeiros estão dizendo</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="flex items-center mb-4">
-              <img src="cliente-carlos.jpg" alt="Carlos" class="w-12 h-12 rounded-full mr-4">
-              <div>
-                <p class="font-semibold">Carlos Silva</p>
-                <p class="text-gray-500 text-sm">Barbearia Tradição</p>
-              </div>
-            </div>
-            <p class="italic mb-4">"Depois do BarberTime, minhas faltas caíram 70%. Agora meus clientes lembram sozinhos dos horários e ainda podem reagendar pelo app!"</p>
-            <div class="flex text-yellow-400">
-              ★ ★ ★ ★ ★
-            </div>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="flex items-center mb-4">
-              <img src="cliente-ana.jpg" alt="Ana" class="w-12 h-12 rounded-full mr-4">
-              <div>
-                <p class="font-semibold">Ana Paula</p>
-                <p class="text-gray-500 text-sm">Studio Hair</p>
-              </div>
-            </div>
-            <p class="italic mb-4">"Finalmente parei de perder tempo com papelada. Consigo focar no que importa: cortar cabelo bem feito. Meus clientes amam a facilidade de marcar!"</p>
-            <div class="flex text-yellow-400">
-              ★ ★ ★ ★ ★
-            </div>
-          </div>
-        </div>
-        <div class="mt-8 text-center">
-          <p class="text-gray-600 mb-4">+ de 300 barbearias já usam o BarberTime</p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <img src="barbearia-1-logo.png" alt="Barbearia 1" class="h-10 opacity-70 hover:opacity-100 transition">
-            <img src="barbearia-2-logo.png" alt="Barbearia 2" class="h-10 opacity-70 hover:opacity-100 transition">
-            <img src="barbearia-3-logo.png" alt="Barbearia 3" class="h-10 opacity-70 hover:opacity-100 transition">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="py-16 px-6 bg-white">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Perguntas frequentes</h2>
-        
-        <div class="space-y-4">
-          <div class="border-b border-gray-200 pb-4">
-            <button onclick="toggleFAQ(1)" class="flex justify-between items-center w-full text-left font-semibold hover:text-blue-600 transition">
-              <span>Quanto custa o BarberTime?</span>
-              <span class="text-xl">+</span>
-            </button>
-            <div id="faq-1" class="faq-content">
-              <p class="mt-2 text-gray-600">O BarberTime é gratuito para começar, com planos premium a partir de R$29/mês para recursos avançados como lembretes por WhatsApp, pagamento online e relatórios detalhados.</p>
-            </div>
-          </div>
-          
-          <div class="border-b border-gray-200 pb-4">
-            <button onclick="toggleFAQ(2)" class="flex justify-between items-center w-full text-left font-semibold hover:text-blue-600 transition">
-              <span>Preciso de conhecimento técnico para usar?</span>
-              <span class="text-xl">+</span>
-            </button>
-            <div id="faq-2" class="faq-content">
-              <p class="mt-2 text-gray-600">Não! O BarberTime foi feito para ser super simples. Em menos de 10 minutos você configura sua barbearia e já pode começar a receber agendamentos.</p>
-            </div>
-          </div>
-          
-          <div class="border-b border-gray-200 pb-4">
-            <button onclick="toggleFAQ(3)" class="flex justify-between items-center w-full text-left font-semibold hover:text-blue-600 transition">
-              <span>Posso usar em mais de uma barbearia?</span>
-              <span class="text-xl">+</span>
-            </button>
-            <div id="faq-3" class="faq-content">
-              <p class="mt-2 text-gray-600">Sim! Nosso plano profissional permite gerenciar múltiplas unidades com uma única conta, perfeito para quem tem mais de uma barbearia ou franquias.</p>
-            </div>
-          </div>
-          
-          <div class="border-b border-gray-200 pb-4">
-            <button onclick="toggleFAQ(4)" class="flex justify-between items-center w-full text-left font-semibold hover:text-blue-600 transition">
-              <span>Como os clientes fazem agendamentos?</span>
-              <span class="text-xl">+</span>
-            </button>
-            <div id="faq-4" class="faq-content">
-              <p class="mt-2 text-gray-600">Você recebe um link personalizado que pode compartilhar nas redes sociais, site ou WhatsApp. Os clientes acessam e marcam direto pelo celular, sem precisar instalar nada.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 px-6 bg-blue-600 text-white">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">Pronto para transformar sua barbearia?</h2>
-        <p class="text-xl mb-8">Junte-se a centenas de barbeiros que já simplificaram seus agendamentos.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="https://saas-barbertime.lovable.app" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
-            Comece agora — Grátis
-          </a>
-          <a href="#features" class="border-2 border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
-            Conheça os recursos
-          </a>
-        </div>
-        <p class="mt-6 text-blue-100">Sem cartão de crédito necessário • Cancelamento a qualquer momento</p>
-      </div>
-    </section>
-
-    <footer class="bg-gray-900 text-gray-400 py-12 px-6">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div class="flex items-center gap-2 mb-4">
-              <img src="logo-barbertime-white.png" alt="BarberTime Logo" class="h-8" />
-              <span class="text-white font-bold">BarberTime</span>
-            </div>
-            <p class="text-sm">Solução completa para gestão de barbearias. Feito para barbeiros, por barbeiros.</p>
-          </div>
-          <div>
-            <h4 class="text-white font-semibold mb-4">Produto</h4>
-            <ul class="space-y-2">
-              <li><a href="#features" class="hover:text-white transition">Recursos</a></li>
-              <li><a href="#" class="hover:text-white transition">Planos</a></li>
-              <li><a href="#" class="hover:text-white transition">App Mobile</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-white font-semibold mb-4">Suporte</h4>
-            <ul class="space-y-2">
-              <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
-              <li><a href="#" class="hover:text-white transition">Contato</a></li>
-              <li><a href="#" class="hover:text-white transition">Tutoriais</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-white font-semibold mb-4">Legal</h4>
-            <ul class="space-y-2">
-              <li><a href="#" class="hover:text-white transition">Termos de uso</a></li>
-              <li><a href="#" class="hover:text-white transition">Política de privacidade</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-t border-gray-800 pt-8 text-center text-sm">
-          © 2025 BarberTime. Todos os direitos reservados.
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      function toggleFAQ(id) {
-        const faq = document.getElementById(`faq-${id}`);
-        const button = faq.previousElementSibling;
-        
-        if (faq.style.maxHeight) {
-          faq.style.maxHeight = null;
-          button.querySelector('span:last-child').textContent = '+';
-        } else {
-          faq.style.maxHeight = faq.scrollHeight + 'px';
-          button.querySelector('span:last-child').textContent = '-';
+        :root {
+            --primary: #1c6caf;       /* Azul principal */
+            --primary-dark: #0F172A;  /* Azul escuro para contrastes */
+            --secondary: #e22a30;     /* Vermelho/accent */
+            --light-accent: #de8489;  /* Vermelho claro */
+            --light-blue: #779ab9;    /* Azul claro */
+            --light-gray: #acb3b9;   /* Cinza claro */
+            --light: #F8FAFC;         /* Branco */
+            --dark: #020617;          /* Preto */
         }
-      }
-
-      // Inicializa os FAQs
-      document.querySelectorAll('.faq-content').forEach(el => {
-        el.style.maxHeight = null;
-      });
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: white;
+            color: var(--primary);
+            padding: 1.5rem 5%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--secondary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .cta-button {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(226, 42, 48, 0.3);
+            background-color: #c82329;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: var(--secondary);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: var(--light-accent);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero-image {
+            max-width: 800px;
+            margin: 2rem auto 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 3px solid var(--secondary);
+        }
+        
+        .features {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--light-blue);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(28, 108, 175, 0.1);
+            border-top: 3px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(28, 108, 175, 0.2);
+        }
+        
+        .feature-icon {
+            background-color: rgba(28, 108, 175, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-icon svg {
+            width: 30px;
+            height: 30px;
+            color: var(--primary);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .pricing {
+            background-color: var(--primary);
+            color: white;
+            padding: 5rem 5%;
+        }
+        
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            color: var(--dark);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            border-top: 3px solid var(--secondary);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.25rem 1rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--light-blue);
+        }
+        
+        .pricing-features {
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .pricing-features li::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+        }
+        
+        .testimonials {
+            padding: 5rem 5%;
+            background-color: var(--light);
+        }
+        
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(28, 108, 175, 0.1);
+            border-top: 3px solid var(--secondary);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .testimonial-name h4 {
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-name p {
+            color: var(--light-blue);
+            font-size: 0.875rem;
+        }
+        
+        .testimonial-rating {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .faq {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #E2E8F0;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: var(--light-blue);
+            display: none;
+        }
+        
+        .faq-answer.show {
+            display: block;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+        
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 3rem 5%;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-about p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .features-grid, .pricing-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                Barber<span>Time</span>
+            </div>
+            <a href="#pricing" class="cta-button">Comece Agora</a>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Revolucione sua barbearia com o <span>BarberTime</span></h1>
+            <p>O sistema completo para gestão de barbearias que simplifica agendamentos, organiza sua agenda e aumenta sua produtividade.</p>
+            <a href="#pricing" class="cta-button">Experimente Gratuitamente</a>
+            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dashboard BarberTime" class="hero-image">
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="features-container">
+            <div class="section-title">
+                <h2>Tudo que você precisa em um só lugar</h2>
+                <p>O BarberTime foi desenvolvido especialmente para atender as necessidades de barbeiros modernos que querem otimizar seu tempo e melhorar a experiência dos clientes.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3>Agendamento Inteligente</h3>
+                    <p>Seus clientes agendam horários 24/7 diretamente pelo seu perfil, sem necessidade de ligações ou mensagens.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h3>Gestão Completa</h3>
+                    <p>Controle seus horários, serviços, clientes e finanças em uma plataforma integrada e fácil de usar.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3>Pagamentos Integrados</h3>
+                    <p>Aceite pagamentos online e tenha controle total sobre suas finanças com relatórios detalhados.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3>Lembretes Automáticos</h3>
+                    <p>Reduza faltas com lembretes automáticos por WhatsApp e e-mail para seus clientes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3>Perfil Profissional</h3>
+                    <p>Mostre seu trabalho, avaliações e serviços em um perfil personalizado que atrai novos clientes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                        </svg>
+                    </div>
+                    <h3>Feedback dos Clientes</h3>
+                    <p>Receba avaliações e feedbacks diretamente na plataforma para melhorar continuamente seu serviço.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <div class="section-title">
+                <h2 style="color: white;">Planos que cabem no seu bolso</h2>
+                <p style="color: var(--light-blue);">Escolha o plano ideal para o tamanho do seu negócio e comece a simplificar sua rotina hoje mesmo.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Plano Mensal</h3>
+                    <div class="price">R$49,90<span>/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>Agendamentos ilimitados</li>
+                        <li>Até 3 profissionais</li>
+                        <li>Pagamentos integrados</li>
+                        <li>Relatórios financeiros</li>
+                        <li>Feedback de clientes</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/oKDnQaa" class="cta-button">Assinar Plano</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="popular-badge">ECONÔMICO</div>
+                    <h3>Plano Anual</h3>
+                    <div class="price">R$590<span>/ano</span></div>
+                    <p style="color: var(--secondary); font-weight: 600; margin-bottom: 1rem;">Economize 2 meses</p>
+                    <ul class="pricing-features">
+                        <li>Todos os benefícios do mensal</li>
+                        <li>Profissionais ilimitados</li>
+                        <li>Gestão de equipe completa</li>
+                        <li>Relatórios avançados</li>
+                        <li>Integração com redes sociais</li>
+                        <li>Suporte 24/7</li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/vQonK55" class="cta-button">Assinar Plano</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--light-blue);">Não tem certeza? Experimente nosso plano gratuito por 14 dias sem compromisso.</p>
+                <a href="#pricing" class="cta-button" style="background-color: transparent; border: 2px solid white; margin-top: 1rem;">Teste Grátis</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-title">
+                <h2>Barbeiros que confiam no BarberTime</h2>
+                <p>Veja o que profissionais como você estão falando sobre nossa plataforma.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva" class="testimonial-avatar">
+                        <div class="testimonial-name">
+                            <h4>Carlos Silva</h4>
+                            <p>Barbearia Moderna - SP</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"Depois que comecei a usar o BarberTime, minha agenda ficou muito mais organizada. Os clientes adoram poder agendar pelo celular e eu ganhei pelo menos 2 horas por dia que perdia atendendo ligações."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Ricardo Andrade" class="testimonial-avatar">
+                        <div class="testimonial-name">
+                            <h4>Ricardo Andrade</h4>
+                            <p>Ricardo's Barber - RJ</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"O sistema de pagamento integrado foi um divisor de águas para meu negócio. Agora consigo receber adiantado por muitos serviços e minhas finanças estão muito mais controladas."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Fernanda Oliveira" class="testimonial-avatar">
+                        <div class="testimonial-name">
+                            <h4>Fernanda Oliveira</h4>
+                            <p>Barbearia Estilo - MG</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★☆</div>
+                    <p>"Como dona de barbearia, o BarberTime me ajuda a gerenciar minha equipe e acompanhar o desempenho de cada profissional. As faltas reduziram em 70% com os lembretes automáticos."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq">
+        <div class="faq-container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre o BarberTime antes de começar.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Posso testar antes de assinar?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim! Oferecemos um período de teste gratuito de 14 dias para você conhecer todas as funcionalidades da plataforma sem compromisso. Não pedimos cartão de crédito para o teste.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Como os clientes fazem agendamentos?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Você recebe um link personalizado que pode compartilhar em suas redes sociais, WhatsApp ou site. Os clientes acessam esse link, escolhem o serviço, o profissional e o horário disponível, fazendo o agendamento em poucos cliques.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Posso mudar de plano depois?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim, você pode mudar de plano a qualquer momento sem custo adicional. Se você precisar de menos recursos, pode fazer o downgrade no final do período contratado.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>O BarberTime funciona no celular?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Totalmente! Nosso sistema foi desenvolvido para funcionar perfeitamente em smartphones, tablets e computadores. Você e seus clientes podem acessar de qualquer dispositivo com internet.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>E se eu precisar de ajuda?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Oferecemos suporte por e-mail, chat e WhatsApp com tempos de resposta rápidos. Além disso, temos uma biblioteca de tutoriais em vídeo e um centro de ajuda com respostas para as dúvidas mais comuns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Pronto para transformar sua barbearia?</h2>
+            <p>Junte-se a mais de 1.200 barbeiros que já simplificaram sua rotina com o BarberTime.</p>
+            <a href="#pricing" class="cta-button">Comece Agora - 14 Dias Grátis</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">Barber<span>Time</span></div>
+                <p>A plataforma completa para gestão de barbearias que ajuda profissionais a economizarem tempo e aumentarem seus lucros.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Produto</h3>
+                <ul>
+                    <li><a href="#">Funcionalidades</a></li>
+                    <li><a href="#">Planos</a></li>
+                    <li><a href="#">Teste Grátis</a></li>
+                    <li><a href="#">Novidades</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Tutoriais</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Webinars</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Empresa</h3>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Termos</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 BarberTime. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('svg');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('show');
+                
+                // Rotate icon
+                if (answer.classList.contains('show')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
-  </body>
+</body>
 </html>

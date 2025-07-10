@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sistema de agendamento para barbearias. Agenda online, lembretes automáticos e controle total dos seus horários.">
+    <meta name="keywords" content="barbearia, agendamento, agenda online, barbertime, sistema barbearia">
+    <title>BarberTime - Agendamentos sem complicação para barbearias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="logo-barbertime.png" alt="BarberTime Logo" class="h-10" />
+          <span class="text-xl font-bold text-gray-900">BarberTime</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#features" class="hover:text-blue-600 transition">Recursos</a>
+          <a href="#testimonials" class="hover:text-blue-600 transition">Depoimentos</a>
+          <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+        </nav>
+        <a href="https://saas-barbertime.lovable.app" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Acessar App</a>
+      </div>
+    </header>
+
+    <main class="text-center py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Agendamentos fáceis para barbeiros modernos <span class="text-blue-600">💈</span>
+        </h1>
+        <p class="text-lg md:text-xl mb-8 text-gray-600">
+          Chega de papel, planilhas ou esquecer clientes. Com o <strong class="text-blue-600">BarberTime</strong>, você organiza sua agenda, recebe lembretes e mostra profissionalismo.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://saas-barbertime.lovable.app" class="inline-block bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-900 transition shadow-lg hover:shadow-xl">
+            Comece agora — Grátis
+          </a>
+          <a href="#features" class="inline-block border-2 border-gray-300 text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+            Conheça os recursos
+          </a>
+        </div>
+        <div class="mt-12 rounded-xl overflow-hidden shadow-xl border border-gray-200 max-w-4xl mx-auto">
+          <img src="dashboard-preview.jpg" alt="Preview do BarberTime" class="w-full h-auto">
+        </div>
+      </div>
+    </main>
+
+    <section id="features" class="py-16 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Recursos que fazem a diferença</h2>
+        
+        <div class="flex flex-col md:flex-row items-center mb-16">
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <h3 class="text-2xl font-semibold mb-4">Agendamento 24/7</h3>
+            <p class="text-gray-600 mb-4">Seus clientes podem marcar horário a qualquer momento, mesmo quando você está dormindo.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✓</span>
+                <span>Integração com Google Calendar</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✓</span>
+                <span>Bloqueio de horários indisponíveis</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✓</span>
+                <span>Pagamento online integrado</span>
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-1/2">
+            <img src="agendamento-feature.jpg" alt="Agendamento 24/7" class="rounded-lg shadow-md border border-gray-200">
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center mb-16">
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+            <h3 class="text-2xl font-semibold mb-4">Lembretes automáticos</h3>
+            <p class="text-gray-600 mb-4">Reduza faltas com notificações personalizadas por WhatsApp ou e-mail.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✓</span>
+                <span>Confirmação automática de agendamentos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✓</span>
+                <span>Lembrete 24h antes do serviço</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✓</span>
+                <span>Personalize as mensagens</span>
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-1/2">
+            <img src="lembretes-feature.jpg" alt="Lembretes automáticos" class="rounded-lg shadow-md border border-gray-200">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10 text-center mt-12">
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-blue-600 text-xl">📅</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Agenda Inteligente</h3>
+            <p class="text-gray-600">Visualize sua agenda de forma clara e organize seus horários com facilidade.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-blue-600 text-xl">📱</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">App Mobile</h3>
+            <p class="text-gray-600">Acesse sua agenda de qualquer lugar pelo celular ou tablet.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-blue-600 text-xl">📊</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Relatórios</h3>
+            <p class="text-gray-600">Acompanhe seus melhores clientes e serviços mais populares.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-16 px-6 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">O que os barbeiros estão dizendo</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img src="cliente-carlos.jpg" alt="Carlos" class="w-12 h-12 rounded-full mr-4">
+              <div>
+                <p class="font-semibold">Carlos Silva</p>
+                <p class="text-gray-500 text-sm">Barbearia Tradição</p>
+              </div>
+            </div>
+            <p class="italic mb-4">"Depois do BarberTime, minhas faltas caíram 70%. Agora meus clientes lembram sozinhos dos horários e ainda podem reagendar pelo app!"</p>
+            <div class="flex text-yellow-400">
+              ★ ★ ★ ★ ★
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img src="cliente-ana.jpg" alt="Ana" class="w-12 h-12 rounded-full mr-4">
+              <div>
+                <p class="font-semibold">Ana Paula</p>
+                <p class="text-gray-500 text-sm">Studio Hair</p>
+              </div>
+            </div>
+            <p class="italic mb-4">"Finalmente parei de perder tempo com papelada. Consigo focar no que importa: cortar cabelo bem feito. Meus clientes amam a facilidade de marcar!"</p>
+            <div class="flex text-yellow-400">
+              ★ ★ ★ ★ ★
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <p class="text-gray-600 mb-4">+ de 300 barbearias já usam o BarberTime</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <img src="barbearia-1-logo.png" alt="Barbearia 1" class="h-10 opacity-70 hover:opacity-100 transition">
+            <img src="barbearia-2-logo.png" alt="Barbearia 2" class="h-10 opacity-70 hover:opacity-100 transition">
+            <img src="barbearia-3-logo.png" alt="Barbearia 3" class="h-10 opacity-70 hover:opacity-100 transition">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-16 px-6 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Perguntas frequentes</h2>
+        
+        <div class="space-y-4">
+          <div class="border-b border-gray-200 pb-4">
+            <button onclick="toggleFAQ(1)" class="flex justify-between items-center w-full text-left font-semibold hover:text-blue-600 transition">
+              <span>Quanto custa o BarberTime?</span>
+              <span class="text-xl">+</span>
+            </button>
+            <div id="faq-1" class="faq-content">
+              <p class="mt-2 text-gray-600">O BarberTime é gratuito para começar, com planos premium a partir de R$29/mês para recursos avançados como lembretes por WhatsApp, pagamento online e relatórios detalhados.</p>
+            </div>
+          </div>
+          
+          <div class="border-b border-gray-200 pb-4">
+            <button onclick="toggleFAQ(2)" class="flex justify-between items-center w-full text-left font-semibold hover:text-blue-600 transition">
+              <span>Preciso de conhecimento técnico para usar?</span>
+              <span class="text-xl">+</span>
+            </button>
+            <div id="faq-2" class="faq-content">
+              <p class="mt-2 text-gray-600">Não! O BarberTime foi feito para ser super simples. Em menos de 10 minutos você configura sua barbearia e já pode começar a receber agendamentos.</p>
+            </div>
+          </div>
+          
+          <div class="border-b border-gray-200 pb-4">
+            <button onclick="toggleFAQ(3)" class="flex justify-between items-center w-full text-left font-semibold hover:text-blue-600 transition">
+              <span>Posso usar em mais de uma barbearia?</span>
+              <span class="text-xl">+</span>
+            </button>
+            <div id="faq-3" class="faq-content">
+              <p class="mt-2 text-gray-600">Sim! Nosso plano profissional permite gerenciar múltiplas unidades com uma única conta, perfeito para quem tem mais de uma barbearia ou franquias.</p>
+            </div>
+          </div>
+          
+          <div class="border-b border-gray-200 pb-4">
+            <button onclick="toggleFAQ(4)" class="flex justify-between items-center w-full text-left font-semibold hover:text-blue-600 transition">
+              <span>Como os clientes fazem agendamentos?</span>
+              <span class="text-xl">+</span>
+            </button>
+            <div id="faq-4" class="faq-content">
+              <p class="mt-2 text-gray-600">Você recebe um link personalizado que pode compartilhar nas redes sociais, site ou WhatsApp. Os clientes acessam e marcam direto pelo celular, sem precisar instalar nada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-6 bg-blue-600 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Pronto para transformar sua barbearia?</h2>
+        <p class="text-xl mb-8">Junte-se a centenas de barbeiros que já simplificaram seus agendamentos.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://saas-barbertime.lovable.app" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            Comece agora — Grátis
+          </a>
+          <a href="#features" class="border-2 border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+            Conheça os recursos
+          </a>
+        </div>
+        <p class="mt-6 text-blue-100">Sem cartão de crédito necessário • Cancelamento a qualquer momento</p>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <img src="logo-barbertime-white.png" alt="BarberTime Logo" class="h-8" />
+              <span class="text-white font-bold">BarberTime</span>
+            </div>
+            <p class="text-sm">Solução completa para gestão de barbearias. Feito para barbeiros, por barbeiros.</p>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-4">Produto</h4>
+            <ul class="space-y-2">
+              <li><a href="#features" class="hover:text-white transition">Recursos</a></li>
+              <li><a href="#" class="hover:text-white transition">Planos</a></li>
+              <li><a href="#" class="hover:text-white transition">App Mobile</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-4">Suporte</h4>
+            <ul class="space-y-2">
+              <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+              <li><a href="#" class="hover:text-white transition">Contato</a></li>
+              <li><a href="#" class="hover:text-white transition">Tutoriais</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-4">Legal</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white transition">Termos de uso</a></li>
+              <li><a href="#" class="hover:text-white transition">Política de privacidade</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-sm">
+          © 2025 BarberTime. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleFAQ(id) {
+        const faq = document.getElementById(`faq-${id}`);
+        const button = faq.previousElementSibling;
+        
+        if (faq.style.maxHeight) {
+          faq.style.maxHeight = null;
+          button.querySelector('span:last-child').textContent = '+';
+        } else {
+          faq.style.maxHeight = faq.scrollHeight + 'px';
+          button.querySelector('span:last-child').textContent = '-';
+        }
+      }
+
+      // Inicializa os FAQs
+      document.querySelectorAll('.faq-content').forEach(el => {
+        el.style.maxHeight = null;
+      });
+    </script>
+  </body>
+</html>
